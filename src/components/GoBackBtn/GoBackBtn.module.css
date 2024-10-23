@@ -1,0 +1,22 @@
+.btn {
+  padding: 10px 20px;
+  background-color: inherit;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #1ff855;
+  font-weight: 900;
+  font-size: 20px;
+  transition: all 500ms ease;
+}
+
+.span {
+  margin-left: 5px;
+}
+
+.btn:focus,
+.btn:hover {
+  background-color: azure;
+  color: black;
+}

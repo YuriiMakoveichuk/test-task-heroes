@@ -1,0 +1,23 @@
+.box {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  margin: 30px 0 15px;
+  color: rgb(31, 248, 85);
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  font-size: 24px;
+  color: azure;
+}

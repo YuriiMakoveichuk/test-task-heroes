@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: azure;
+  justify-content: center;
+}
+
+.item {
+  padding: 10px;
+  border: 2px solid azure;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.active {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid greenyellow;
+  color: greenyellow;
+  font-weight: bold;
+}
