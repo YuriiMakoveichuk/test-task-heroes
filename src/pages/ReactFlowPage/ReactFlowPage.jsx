@@ -9,14 +9,10 @@ import "@xyflow/react/dist/style.css";
 
 import Films from "../../components/Films/Films.jsx";
 import DetailsHero from "../../components/DetailsHero/DetailsHero.jsx";
-import Starships from "../../components/Starships/Starships.jsx";
+// import Starships from "../../components/Starships/Starships.jsx";
 // import DetailsHero from "../../components/DetailsHero/DetailsHero.jsx";
 
-const rfStyle = {
-  backgroundColor: "#B8CEFF",
-  height: "100hv",
-  width: "100hv",
-};
+import css from "./ReactFlowPage.module.css";
 
 const initialNodes = [
   {
@@ -28,26 +24,33 @@ const initialNodes = [
     id: "node-2",
     type: "Films",
     targetPosition: "top",
-    position: { x: -200, y: 700 },
+    position: { x: -200, y: 300 },
   },
-  {
-    id: "node-3",
-    type: "Starships",
-    targetPosition: "top",
-    position: { x: 200, y: 700 },
-  },
+  // {
+  //   id: "node-3",
+  //   type: "Starships",
+  //   targetPosition: "top",
+  //   position: { x: 200, y: 700 },
+  // },
 ];
 
 const initialEdges = [
-  { id: "edge-1", source: "node-1", target: "node-2", sourceHandle: "a" },
+  {
+    id: "edge-1",
+    source: "node-1",
+    target: "node-2",
+    sourceHandle: "a",
+    animated: true,
+  },
   { id: "edge-2", source: "node-1", target: "node-3", sourceHandle: "a" },
 ];
 
 const nodeTypes = {
   DetailsHero: DetailsHero,
   Films: Films,
-  Starships: Starships,
 };
+
+// console.log(Films);
 
 const ReactFlowPage = () => {
   const [nodes, setNodes] = useState(initialNodes);
@@ -66,7 +69,7 @@ const ReactFlowPage = () => {
     [setEdges]
   );
   return (
-    <div style={{ width: 1000, height: 1000, backgroundColor: "#B8CEFF" }}>
+    <div className={css.box}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -75,7 +78,6 @@ const ReactFlowPage = () => {
         onConnect={onConnect}
         nodeTypes={nodeTypes}
         fitView
-        style={rfStyle}
       />
     </div>
   );

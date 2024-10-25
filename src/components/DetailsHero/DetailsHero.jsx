@@ -18,7 +18,7 @@ const DetailsHero = ({ isConnectable }) => {
   // const [isLoading, setIsLoading] = useState(false);
   // const [error, setError] = useState(null);
 
-  const backLinkRef = useRef("/");
+  const backLinkRef = useRef("/people");
 
   useEffect(() => {
     const fetchDetailsHero = async () => {
