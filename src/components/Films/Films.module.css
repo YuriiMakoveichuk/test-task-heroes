@@ -13,11 +13,10 @@
 
 .list {
   display: flex;
-  flex-direction: column;
   gap: 10px;
 }
 
 .item {
   font-size: 24px;
-  color: azure;
+  color: black;
 }
